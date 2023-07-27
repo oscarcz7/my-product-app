@@ -6,13 +6,15 @@ import { HomePage } from './home.page';
 
 import { HomePageRoutingModule } from './home-routing.module';
 
+import { ProductListModule } from '../product-list/product-list.module'; // Import the ProductListModule
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    HomePageRoutingModule,
+    ProductListModule
   ],
   declarations: [HomePage]
 })

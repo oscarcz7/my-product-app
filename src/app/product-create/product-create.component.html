@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Create Product
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-input label="Name" [(ngModel)]="newProduct.productName"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Unit Price</ion-label>
+    <ion-input type="number" [(ngModel)]="newProduct.unitPrice"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Category</ion-label>
+    <ion-input [(ngModel)]="newProduct.categoryName"></ion-input>
+    <!-- <ion-select [(ngModel)]="newProduct.categoryId" name="option">
+      <ion-select-option value="option1">Option 1</ion-select-option>
+      <ion-select-option value="option2">Option 2</ion-select-option>
+      <ion-select-option value="option3">Option 3</ion-select-option>
+    </ion-select> -->
+  </ion-item>
+  <ion-button expand="full" (click)="createProduct()">Create</ion-button>
+  
+</ion-content>

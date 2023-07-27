@@ -1,0 +1,21 @@
+<ion-header >
+  <ion-toolbar>
+    <ion-title>Product List</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <ion-list>
+        <ion-item *ngFor="let product of products" 
+        
+        >
+          <ion-label>{{ product.productName }}</ion-label>
+          <ion-label>{{ product.categoryName }}</ion-label>
+          <ion-label>{{ product.unitInStock }}</ion-label>
+          <ion-label>{{ product.unitPrice }}</ion-label>
+        </ion-item>
+      </ion-list>
+  </div>
+  <!-- <ion-button (click)="createProduct()">Add Product</ion-button> -->
+</ion-content>
