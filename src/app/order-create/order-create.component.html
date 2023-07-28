@@ -1,0 +1,21 @@
+<ion-content>
+  <ion-card class="product-form">
+    <ion-card-content>
+      <!-- <ion-item>
+        <ion-label>Date</ion-label>
+        <ion-datetime display-format="YYYY-MM-DD" picker-format="YYYY-MM-DD" [(ngModel)]="newOrder.OrderDate"></ion-datetime>
+      </ion-item> -->
+      <ion-item>
+        <ion-input label="Order Date" type="date" [(ngModel)]="newOrder.OrderDate"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-select [(ngModel)]="newOrder.CustomerId">
+          <ion-select-option *ngFor="let customer of customers" [value]="customer.id">{{ customer.firstName }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button expand="full" color="primary" (click)="createCustomer()">Create</ion-button>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

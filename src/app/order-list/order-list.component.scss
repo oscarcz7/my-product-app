@@ -1,0 +1,46 @@
+.product-table {
+    --ion-background-color: #f5f5f5; /* Set the background color of the table */
+
+    .table-header {
+      font-weight: bold;
+      border-bottom: 1px solid #ccc; /* Add a bottom border to the table header row */
+    }
+  
+    .table-row {
+      border-bottom: 2px solid #ccc; /* Add a bottom border to each table row */
+    }
+  
+    ion-col {
+      padding: 12px; /* Add some padding to the table cells */
+    }
+  
+    ion-col {
+        padding: 8px; /* Add some padding to the table cells */
+    
+        @media (min-width: 768px) {
+          /* Medium-sized screens: Two columns per row */
+          width: 50%;
+        }
+    
+        @media (max-width: 767px) {
+          /* Small screens: One column per row */
+          width: 100%;
+        }
+      }
+    
+      .image-col {
+        /* ... Existing styles ... */
+    
+        ion-img {
+          max-height: 100px;
+          max-width: 100px;
+    
+          @media (max-width: 767px) {
+            /* Adjust image size on small screens */
+            max-height: 50px;
+            max-width: 50px;
+          }
+        }
+    }
+  }
+  

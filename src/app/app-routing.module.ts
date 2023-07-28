@@ -18,6 +18,21 @@ const routes: Routes = [
       import('./customers/customers.module').then((m) => m.CustomersPageModule),
   },
   {
+    path: 'new-customers',
+    loadChildren: () =>
+      import('./new-customer/new-customer.module').then((m) => m.NewCustomerPageModule),
+  },
+  {
+    path: 'orders',
+    loadChildren: () =>
+      import('./orders/orders.module').then((m) => m.OrdersPageModule),
+  },
+  {
+    path: 'new-order',
+    loadChildren: () =>
+      import('./new-order/new-order.module').then((m) => m.NewOrderPageModule),
+  },
+  {
     path: '',
     redirectTo: 'products',
     pathMatch: 'full',

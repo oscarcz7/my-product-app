@@ -1,0 +1,67 @@
+.product-form {
+    margin: 0 auto;
+    max-width: 750px;
+  }
+  
+  .product-form ion-item {
+    --padding-start: 0;
+    --padding-end: 0;
+    margin-bottom: 20px;
+  }
+  
+  .product-form ion-label {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .product-form ion-input,
+  .product-form ion-select,
+  .product-form ion-textarea,
+  .product-form input[type='file'] {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 12px;
+    width: 100%;
+  }
+  
+  .product-form ion-select {
+    --padding-end: 36px;
+  }
+  
+  .product-form ion-select::after {
+    border-color: #000;
+  }
+  
+  .product-form ion-button {
+    margin-top: 24px;
+    width: 100%;
+  }
+  
+  /* Responsive Styles */
+  
+  /* On small screens, set the max-width of the form to 100% to fit the screen width */
+  @media (max-width: 575.98px) {
+    .product-form {
+      max-width: 100%;
+    }
+  }
+  
+  /* On medium and large screens, display form elements in two columns */
+  @media (min-width: 576px) {
+
+    .product-form ion-item {
+      width: 75%;
+    }
+  
+    .product-form ion-button {
+      width: 75%;
+    }
+  }
+  
+  /* On large screens, display form elements in three columns */
+  @media (min-width: 992px) {
+    .product-form ion-item {
+      width: 100%;
+    }
+  }
+  

@@ -11,9 +11,13 @@
         <ion-input label="Unit Price" type="number" [(ngModel)]="newProduct.unitPrice"></ion-input>
       </ion-item>
       <ion-item>
-        <!-- <ion-input [(ngModel)]="newProduct.categoryName"></ion-input> -->
-        <ion-select label="Category" [(ngModel)]="newProduct.categoryId" name="option">
+        
+        <!-- <ion-select label="Category" [(ngModel)]="newProduct.categoryId" name="option">
           <ion-select-option value="64c1c7929a352e4225007b60">Laptop</ion-select-option>
+        </ion-select> -->
+
+        <ion-select [(ngModel)]="newProduct.categoryId">
+          <ion-select-option *ngFor="let category of productCategories" [value]="category.id">{{ category }}</ion-select-option>
         </ion-select>
       </ion-item>
       <ion-button expand="full" color="primary" (click)="createProduct()">Create</ion-button>

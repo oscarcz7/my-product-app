@@ -1,0 +1,25 @@
+<ion-content >
+  <ion-card class="product-form">
+    <ion-card-content>
+      <ion-item>
+        <ion-input label="Name" [(ngModel)]="newCustomer.firstName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Last Name" [(ngModel)]="newCustomer.lastName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Phone"  [(ngModel)]="newCustomer.phone"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Street"  [(ngModel)]="newCustomer.street"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Zip Code"  [(ngModel)]="newCustomer.zipCode"></ion-input>
+      </ion-item>
+      
+      <ion-button expand="full" color="primary" (click)="createCustomer()">Create</ion-button>
+      
+    </ion-card-content>
+  </ion-card>
+  
+</ion-content>

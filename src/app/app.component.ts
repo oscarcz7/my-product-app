@@ -33,11 +33,22 @@ export class AppComponent {
       url: '/customers',
       icon: 'list-outline',
     },
-    // {
-    //   title: 'List Products',
-    //   url: '/products',
-    //   icon: 'list-outline',
-    // },
+    {
+      title: 'Create Customers',
+      url: '/new-customers',
+      icon: 'add-outline',
+    },
+    {
+      title: 'Orders',
+      url: '/orders',
+      icon: 'list-outline',
+    },
+    {
+      title: 'Create Order',
+      url: '/new-order',
+      icon: 'add-outline',
+    },
+   
     // Add more menu items as needed
   ];
 }
