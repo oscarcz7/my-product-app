@@ -49,7 +49,7 @@ export class OrderCreateComponent {
       (order) => {
         console.log('Order created successfully:', order);
         // Redirect to the order detail page after creation
-        this.router.navigate(['/products']);
+        this.router.navigate(['/orders']);
       },
       (error) => {
         console.error('Error creating order:', error);
