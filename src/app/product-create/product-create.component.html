@@ -1,28 +1,24 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Create Product
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-item>
-    <ion-input label="Name" [(ngModel)]="newProduct.productName"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Unit Price</ion-label>
-    <ion-input type="number" [(ngModel)]="newProduct.unitPrice"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>Category</ion-label>
-    <ion-input [(ngModel)]="newProduct.categoryName"></ion-input>
-    <!-- <ion-select [(ngModel)]="newProduct.categoryId" name="option">
-      <ion-select-option value="option1">Option 1</ion-select-option>
-      <ion-select-option value="option2">Option 2</ion-select-option>
-      <ion-select-option value="option3">Option 3</ion-select-option>
-    </ion-select> -->
-  </ion-item>
-  <ion-button expand="full" (click)="createProduct()">Create</ion-button>
+<ion-content >
+  <ion-card class="product-form">
+    <ion-card-content>
+      <ion-item>
+        <ion-input label="Name" [(ngModel)]="newProduct.productName"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Stock" type="number" [(ngModel)]="newProduct.unitInStock"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Unit Price" type="number" [(ngModel)]="newProduct.unitPrice"></ion-input>
+      </ion-item>
+      <ion-item>
+        <!-- <ion-input [(ngModel)]="newProduct.categoryName"></ion-input> -->
+        <ion-select label="Category" [(ngModel)]="newProduct.categoryId" name="option">
+          <ion-select-option value="64c1c7929a352e4225007b60">Laptop</ion-select-option>
+        </ion-select>
+      </ion-item>
+      <ion-button expand="full" color="primary" (click)="createProduct()">Create</ion-button>
+      
+    </ion-card-content>
+  </ion-card>
   
 </ion-content>

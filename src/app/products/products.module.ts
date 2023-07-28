@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
+import { ProductsPage } from './products.page';
 
-import { HomePageRoutingModule } from './home-routing.module';
+import { ProductsPageRoutingModule } from './products-routing.module';
 
 import { ProductListModule } from '../product-list/product-list.module'; // Import the ProductListModule
 
@@ -13,9 +13,9 @@ import { ProductListModule } from '../product-list/product-list.module'; // Impo
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    ProductsPageRoutingModule,
     ProductListModule
   ],
-  declarations: [HomePage]
+  declarations: [ProductsPage]
 })
-export class HomePageModule {}
+export class ProductsPageModule {}

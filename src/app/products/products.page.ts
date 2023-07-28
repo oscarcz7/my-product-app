@@ -3,11 +3,11 @@ import { ProductService } from '../services/product.service';
 import { Product } from '../models/Product';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-products',
+  templateUrl: 'products.page.html',
+  styleUrls: ['products.page.scss'],
 })
-export class HomePage implements OnInit {
+export class ProductsPage implements OnInit {
   products: Product | undefined;
   constructor(private productService: ProductService) {}
 

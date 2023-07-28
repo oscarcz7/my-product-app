@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <!-- <ion-button (click)="createProduct()">Add Product</ion-button> -->
+  <ion-grid class="product-table">
+    <!-- Table header -->
+    <ion-row class="table-header">
+
+      <ion-col>Name</ion-col>
+      <ion-col>Last Name</ion-col>
+      <ion-col>Phone</ion-col>
+      <ion-col>Street</ion-col>
+      <ion-col>Zip Code</ion-col>
+    </ion-row>
+
+    <!-- Table content using ngFor to iterate over the products -->
+    <ion-row *ngFor="let customer of customers" class="table-row">
+
+      <ion-col>{{ customer.firstName }}</ion-col>
+      <ion-col>{{ customer.lastName  }}</ion-col>
+      <ion-col>{{ customer.phone }}</ion-col>
+      <ion-col>{{ customer.street }}</ion-col>
+      <ion-col>{{ customer.zipCode }}</ion-col>
+      
+    </ion-row>
+  </ion-grid>
+</ion-content>

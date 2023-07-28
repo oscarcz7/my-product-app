@@ -1,21 +1,22 @@
-<ion-header >
-  <ion-toolbar>
-    <ion-title>Product List</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <div id="container">
-    <ion-list>
-        <ion-item *ngFor="let product of products" 
-        
-        >
-          <ion-label>{{ product.productName }}</ion-label>
-          <ion-label>{{ product.categoryName }}</ion-label>
-          <ion-label>{{ product.unitInStock }}</ion-label>
-          <ion-label>{{ product.unitPrice }}</ion-label>
-        </ion-item>
-      </ion-list>
-  </div>
-  <!-- <ion-button (click)="createProduct()">Add Product</ion-button> -->
+  <!-- <ion-button href="stocks">Add Product</ion-button> -->
+  <ion-grid class="product-table">
+    <!-- Table header -->
+    <ion-row class="table-header">
+
+      <ion-col>Name</ion-col>
+      <ion-col>Price</ion-col>
+      <ion-col>Stock</ion-col>
+      <ion-col>Category</ion-col>
+    </ion-row>
+
+    <!-- Table content using ngFor to iterate over the products -->
+    <ion-row *ngFor="let product of products" class="table-row">
+
+      <ion-col>{{ product.productName }}</ion-col>
+      <ion-col>{{ product.unitPrice | currency }}</ion-col>
+      <ion-col>{{ product.unitInStock }} unit(s)</ion-col>
+      <ion-col>{{ product.categoryName }}</ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

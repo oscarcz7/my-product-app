@@ -10,7 +10,7 @@ import { ProductService } from '../services/product.service';
 })
 export class ProductCreateComponent {
   newProduct: Product = {
-    id: 0,
+    id: '',
     productName: '',
     unitPrice: 0,
     categoryName: '',
